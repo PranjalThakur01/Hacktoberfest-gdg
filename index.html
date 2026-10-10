@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101115" />
+  <title>ScreenMind — your day, remembered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark"><i></i><i></i><i></i></span><span>screenmind<span class="brand-dot">.</span></span></a>
+      <div class="workspace-label">PERSONAL SPACE <span class="tiny-chevron">⌄</span></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">◫</span>Overview <kbd>⌘ 1</kbd></button>
+        <button class="nav-item" data-view="timeline"><span class="nav-icon">◷</span>Timeline <kbd>⌘ 2</kbd></button>
+        <button class="nav-item" data-view="search"><span class="nav-icon">⌕</span>Search memory <kbd>⌘ K</kbd></button>
+        <button class="nav-item" data-view="insights"><span class="nav-icon">⌁</span>Insights</button>
+      </nav>
+      <div class="sidebar-section"><span>YOUR SPACE</span><button class="icon-button" title="Add collection">＋</button></div>
+      <button class="nav-item collection"><span class="collection-dot violet"></span>Saved moments <span class="nav-count">8</span></button>
+      <button class="nav-item collection"><span class="collection-dot mint"></span>Product ideas <span class="nav-count">4</span></button>
+      <button class="nav-item collection"><span class="collection-dot amber"></span>Reading list <span class="nav-count">12</span></button>
+      <div class="sidebar-bottom">
+        <div class="privacy-card"><div class="privacy-icon">⌑</div><div><strong>Your memory stays yours</strong><p>Everything is processed locally.</p></div><span class="secure-dot"></span></div>
+        <button class="profile"><span class="avatar">P</span><span class="profile-copy"><strong>Pranjal</strong><small>Personal workspace</small></span><span class="profile-menu">···</span></button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="crumb">Overview</strong></div><div class="top-actions"><span class="local-status"><i></i> All systems local</span><button class="help-button">? <span>Help</span></button><button class="avatar mini-avatar">P</button></div></header>
+      <section class="page-content" id="page-content">
+        <div class="welcome-row"><div><div class="eyebrow"><span class="sun-icon">✳</span> FRIDAY, OCTOBER 10, 2026</div><h1>Your day,<br/><span>in perspective.</span></h1><p class="intro">A little more clarity on where your attention went today.</p></div><button class="date-button">Today <span>⌄</span></button></div>
+        <div class="hero-grid">
+          <article class="focus-card panel"><div class="card-topline"><div><span class="section-kicker">FOCUS SCORE</span><span class="info-dot" title="Based on your focus sessions">i</span></div><button class="more-button">···</button></div><div class="focus-body"><div class="score-wrap"><svg viewBox="0 0 180 180" class="score-ring"><circle class="ring-track" cx="90" cy="90" r="75"/><circle class="ring-progress" cx="90" cy="90" r="75"/></svg><div class="score-number"><strong>82</strong><small>/ 100</small></div><span class="orbit-dot"></span></div><div class="focus-copy"><div class="trend-chip">↗ 12% <span>vs. last week</span></div><h2>In the zone.</h2><p>You found a good rhythm today. Your longest focus stretch was <strong>1h 42m</strong>.</p><div class="focus-time"><span class="mini-pulse"></span> 3h 18m focused</div></div></div><div class="card-footnote"><span>YOUR FOCUS THIS WEEK</span><div class="sparkline" aria-label="Focus trend"><i style="height:28%"></i><i style="height:46%"></i><i style="height:38%"></i><i style="height:62%"></i><i style="height:55%"></i><i style="height:82%"></i><i class="today-bar" style="height:72%"></i></div><div class="spark-days"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div></div></article>
+          <article class="memory-card panel"><div class="memory-head"><div><span class="section-kicker">YOUR MEMORY</span><h2>Pick up where<br/>you left off.</h2></div><span class="memory-orb"><i></i><i></i><i></i></span></div><div class="memory-search"><span>⌕</span><input id="memory-input" placeholder="Ask anything about your day..."/><button id="ask-button" aria-label="Ask">↗</button></div><div class="suggestions"><button class="suggestion">What was that article about?</button><button class="suggestion">Find my Figma explorations</button><button class="suggestion">Summarize my morning</button></div><div class="memory-footer"><span><b class="ai-spark">✳</b> Answers grounded in your screen history</span><span class="model-tag"><i></i> LOCAL AI</span></div></article>
+        </div>
+        <div class="section-heading"><div><span class="section-kicker">THE BIG PICTURE</span><h2>Today at a glance</h2></div><button class="text-link" data-go="insights">View insights <span>↗</span></button></div>
+        <div class="stats-grid">
+          <article class="stat-card panel"><div class="stat-label">SCREEN TIME <span class="stat-icon screen">▣</span></div><div class="stat-value">6<span>h</span> 24<span>m</span></div><div class="stat-note"><span class="note-neutral">↗ 8%</span> vs. your daily average</div><div class="mini-bars"><i style="height:24%"></i><i style="height:44%"></i><i style="height:37%"></i><i style="height:62%"></i><i style="height:50%"></i><i style="height:84%"></i><i class="active-bar" style="height:68%"></i><i style="height:37%"></i><i style="height:53%"></i><i style="height:30%"></i><i style="height:44%"></i><i style="height:25%"></i></div></article>
+          <article class="stat-card panel"><div class="stat-label">TOP CATEGORY <span class="stat-icon cat">◈</span></div><div class="stat-value category-value">Creative work</div><div class="stat-note"><span class="note-accent">42%</span> of your active time</div><div class="category-track"><i></i><i></i><i></i><i></i></div><div class="category-legend"><span><i class="legend-purple"></i>Creative</span><span><i class="legend-blue"></i>Productive</span><span><i class="legend-gray"></i>Other</span></div></article>
+          <article class="stat-card panel"><div class="stat-label">MOST USED APP <span class="stat-icon app">⌘</span></div><div class="app-stat"><span class="figma-icon">F</span><div><div class="stat-value app-value">Figma</div><div class="stat-note">1h 56m <span>·</span> 29% of your day</div></div></div><div class="app-line"><span>Activity</span><div><i></i></div><span>6h 24m</span></div></article>
+        </div>
+        <div class="section-heading moments-heading"><div><span class="section-kicker">RECENT MOMENTS</span><h2>Little things you might need</h2></div><button class="text-link" data-go="timeline">Open timeline <span>↗</span></button></div>
+        <div class="moments-grid">
+          <article class="moment-card panel"><div class="moment-thumb figma-thumb"><div class="figma-window"><div class="window-bar"><i></i><i></i><i></i><span>Untitled — Figma</span></div><div class="figma-canvas"><div class="canvas-nav"></div><div class="canvas-card"><i></i><b></b><span></span><span></span></div><div class="canvas-card second"><i></i><b></b><span></span></div><div class="canvas-cursor">↖</div></div></div><span class="thumb-app">Figma</span></div><div class="moment-info"><span class="moment-time">10:42 AM <i>·</i> Creative work</span><h3>Exploring a new onboarding flow</h3><div class="moment-bottom"><span>3 min ago</span><button class="bookmark" aria-label="Save moment">♡</button></div></div></article>
+          <article class="moment-card panel"><div class="moment-thumb article-thumb"><div class="browser-frame"><div class="browser-top"><i></i><i></i><i></i><span></span></div><div class="article-layout"><div class="article-side"></div><div class="article-content"><b>Designing for the way we think</b><i></i><i></i><i></i><div class="article-image"></div></div></div></div><span class="thumb-app">Arc</span></div><div class="moment-info"><span class="moment-time">10:18 AM <i>·</i> Research</span><h3>Reading about cognitive design</h3><div class="moment-bottom"><span>27 min ago</span><button class="bookmark" aria-label="Save moment">♡</button></div></div></article>
+          <article class="moment-card panel"><div class="moment-thumb code-thumb"><div class="code-window"><div class="code-top"><i></i><i></i><i></i><span>◉  app.tsx</span></div><div class="code-body"><span><em>01</em> <b>const</b> today = <strong>new</strong> Date();</span><span><em>02</em> </span><span><em>03</em> <b>function</b> <a>remember</a>() {</span><span><em>04</em> &nbsp; <strong>return</strong> <a>moments</a>.find(day);</span><span><em>05</em> }</span></div></div><span class="thumb-app">VS Code</span></div><div class="moment-info"><span class="moment-time">9:36 AM <i>·</i> Development</span><h3>Building your memory dashboard</h3><div class="moment-bottom"><span>1 hr ago</span><button class="bookmark" aria-label="Save moment">♡</button></div></div></article>
+        </div>
+        <footer class="page-footer"><span>Made for a more mindful workday.</span><span><i></i> Private by design · Powered on-device</span></footer>
+      </section>
+      <section class="chat-panel panel" id="chat-panel" aria-live="polite"><button class="chat-close" id="chat-close">×</button><div class="chat-icon">✳</div><div><span class="section-kicker">YOUR SCREENMIND</span><h3 id="chat-title">Your memory is ready.</h3><p id="chat-answer">Ask a question and I’ll look through your local screen history for the answer.</p></div><div class="chat-result"><span>◷</span><div><b>Today · 10:42 AM</b><small>Exploring a new onboarding flow in Figma</small></div><span class="result-match">BEST MATCH</span></div></section>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
